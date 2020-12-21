@@ -10,6 +10,7 @@ WORKDIR /
 RUN echo "Building stage2 🚧 🚧"
 RUN sleep 10
 COPY --from=stage1 /file ./file
+RUN echo "HELLO ALSO" >> ./file
 RUN echo "Stage2 was here" >> ./file
 
 FROM ubuntu as stage3
